@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:payment_app_screen/core/utils/app_images.dart';
 import 'package:payment_app_screen/core/utils/app_strings.dart';
 
+import '../../views/payment_details_view.dart';
 import '../custom_button.dart';
 import 'order_info_row.dart';
 import 'total_widget.dart';
@@ -45,7 +46,10 @@ class MyCartViewBody extends StatelessWidget {
           ),
           CustomButton(
             text: AppStrings.completePayment,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const PaymentDetailsView()));
+            },
           )
         ],
       ),
